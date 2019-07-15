@@ -1,0 +1,46 @@
+{	
+	"extensionName": "SebaBot",
+	"description": "Controla tu SebaBot",
+	"version": "0.1",
+	"author": "magm(magm3333@gmail.com)",
+	"homepage": "http://www.mblock.cc/posts/create-extensions-for-mblock",
+	"sort":0,
+	"javascriptURL":"",
+  	"firmware":"1.0",
+  	"extensionPort":0,
+	"tags" : "makeblock,sebabot",
+	"blockSpecs": [
+		[
+			"h",
+			"SebaBot",
+			"runArduino"
+		],
+		[
+			"w",
+      "Pines ENA1 %n, IN1 %n, IN2 %n, ENA2 %n, IN3 %n, IN4 %n, SERVO %n, TRIG %n, ECHO %n, SL1 %n, SL2 %n, IR %n",
+			"asignar",
+      "6",
+      "4",
+      "5",
+      "9",
+			"7",
+			"8",
+			"11",
+			"13", 	
+			"12",
+			"3",
+			"2",
+			"10",
+      {
+        "inc" : "#include \"SebaBot.h\"\n",
+        "def" : "SebaBot sebabot({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11});\n",
+        "setup" : "sebabot.begin();\n",
+        "work" : "",
+        "loop":""
+      }
+		]
+	],
+	"menus": {},
+	"values":{},
+	"translators":{}
+}

@@ -17,30 +17,246 @@
 		],
 		[
 			"w",
-      "Pines ENA1 %n, IN1 %n, IN2 %n, ENA2 %n, IN3 %n, IN4 %n, SERVO %n, TRIG %n, ECHO %n, SL1 %n, SL2 %n, IR %n",
+      		"Pines ENA1 %n, IN1 %n, IN2 %n, ENA2 %n, IN3 %n, IN4 %n, SERVO %n, TRIG %n, ECHO %n, SL1 %n, SL2 %n, IR %n, BUZZ %n",
 			"asignar",
-      "6",
-      "4",
-      "5",
-      "9",
+      		"6",
+      		"4",
+      		"5",
+      		"13",
 			"7",
 			"8",
 			"11",
-			"13", 	
+			"2", 	
 			"12",
 			"3",
-			"2",
+			"0",
 			"10",
-      {
-        "inc" : "#include \"SebaBot.h\"\n",
-        "def" : "SebaBot sebabot({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11});\n",
-        "setup" : "sebabot.begin();\n",
-        "work" : "",
-        "loop":""
-      }
-		]
+			"14",
+      		{
+        		"inc" : "#include \"SebaBot.h\"\n",
+    		    "def" : "SebaBot sebabot({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12});\n",
+        		"setup" : "sebabot.inicio();\n",
+        		"work" : "",
+        		"loop":""
+      		}
+		], 
+		[
+    		"w",
+      		"Avanzar motor %d.motores con %n de potencia",
+      		"avanzar",
+			"Motor 1 y 2",
+      		"150",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.avanzar({0},{1});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Retroceder motor %d.motores con %n de potencia",
+      		"retroceder",
+			"Motor 1 y 2",
+      		"150",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.retroceder({0},{1});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Parar motor %d.motores",
+      		"parar",
+			"Motor 1 y 2",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.parar({0});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Mirar a la derecha",
+      		"mirarDerecha",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.mirarDerecha();\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Mirar adelante",
+      		"mirarAdelante",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.mirarAdelante();\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Mirar a la izquierda",
+      		"mirarIzquierda",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.mirarIzquierda();\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Mirar a las %d.mirarHoras hs",
+      		"mirarALas",
+			"12 Hs (Adelante)",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.mirarALas({0});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+			"b",
+			"Hay línea debajo de %d.sensoresLinea",
+			"hayLineaDebajoDe",
+			"Sensor Derecha (L1)",
+			{
+				"inc" : "",
+				"def" : "",
+				"setup" : "",
+				"work":"sebabot.hayLineaDebajoDe({0})",
+				"loop":""
+			}
+		],
+		[
+			"r",
+			"Distancia objeto en cm",
+			"distanciaObjeto",
+			{
+				"inc" : "",
+				"def" : "",
+				"setup" : "",
+				"work":"sebabot.distanciaObjeto()",
+				"loop":""
+			}
+		],
+		[
+    		"w",
+      		"Buzzer frecuencia %n",
+      		"buzzerfrec",
+			"100",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.buzzer({0});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Buzzer frecuencia %n, duración %n ms",
+      		"buzzerfrecdur",
+			"100",
+			"500",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.buzzer({0},{1});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Parar Buzzer",
+      		"pararbuzzer",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.buzzerParar();\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Buzzer nota %d.notas",
+      		"buzzernota",
+			"DO",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.buzzer({0});\n",
+        		"loop" : ""
+      		}
+    	],
+		[
+    		"w",
+      		"Buzzer nota %d.notas - duración %n ms",
+      		"buzzernotadur",
+			"DO",
+			"500",
+      		{
+        		"inc" : "",
+        		"def" : "",
+        		"setup" : "",
+        		"work" : "sebabot.buzzer({0},{1});\n",
+        		"loop" : ""
+      		}
+    	]
+
+
 	],
-	"menus": {},
-	"values":{},
-	"translators":{}
+	"menus": {
+		"motores":["Motor 1","Motor 2","Motor 1 y 2"],
+		"mirarHoras":["3 Hs (Derecha)","2 Hs","1 Hs","12 Hs (Adelante)","11 Hs","10 Hs","9 Hs (Izquierda)"],
+		"sensoresLinea":["Sensor Derecha (L1)","Sensor Izquierda (L2)"],
+		"notas":["DO","DoS","RE","RES","MI","FA","FAS","SOL","SOLS","LA","LAS","SI","RE2","FAS2"]
+	},
+	"values":{
+		"Motor 1":1,
+		"Motor 2":2,
+		"Motor 1 y 2":3,
+		"3 Hs (Derecha)":3,
+		"2 Hs":2,
+		"1 Hs":1,
+		"12 Hs (Adelante)":12,
+		"11 Hs":11,
+		"10 Hs":10,
+		"9 Hs (Izquierda)":9,
+		"Sensor Derecha (L1)":1,
+		"Sensor Izquierda (L2)":2,
+		"DO":523.25, 
+        "DoS":554.37,
+        "RE":587.33,
+        "RES":622.25,
+        "MI":659.26,
+        "FA":698.46,
+        "FAS":739.99,
+        "SOL":783.99,
+        "SOLS":830.61,
+        "LA":880,
+        "LAS":932.33,
+        "SI":987.77,
+        "RE2":1174.66,
+        "FAS2":1479.98
+	},
+	"translators":{} 
 }
